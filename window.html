@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> This is an example for jQuery window object </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+</head>
+<script>
+    var nwindow;
+    function fun_open() {
+        nwindow = window.open("", "newWindow", "width=500, height=500");
+        nwindow.document.write("<h3>This is a new window.</h3>");
+        
+    }
+    function property_apply() {
+        if (!nwindow) {
+            document.getElementById("text").innerHTML = "Not opened 'newWindow'.";
+        } else {
+            if (nwindow.closed) {
+                document.getElementById("text").innerHTML = "Closed 'newWindow'.";
+            } else {
+                document.getElementById("text").innerHTML = " Not closed 'newWindow'..";
+            }
+        }
+    }
+    function get_parent_window() {
+        nwindow.opener.document.write("<p>This is the window which create the new window.</p>");
+    }
+    function fun_close() {
+        if (nwindow) {
+            nwindow.close();
+        }
+    }
+
+</script>
+</head>
+
+<body>
+    <p> Example for the jQuery window properties and methods</p>
+    <ul>
+        <li>
+            <button onclick="fun_open()">Call function to create window</button>
+        </li>
+        <br><br>
+        <li><button onclick="property_apply()"> Call function to check wethere window open or close</button></li>
+        <br><br>
+        <div id="text"></div>
+        <br><br>
+        <li><button onclick="fun_close">Call function to close window</button></li>
+        <br><br>
+        <li> <button onclick="get_parent_window()">Call function to get parent window</button></li>
+        <br><br>
+</body>
+
+</html>

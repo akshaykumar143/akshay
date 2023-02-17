@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome To My Domain</title>
+    <style>
+        div {
+            height: 73px;
+            width: 187px;
+            float: center;
+            margin-right: 17px;
+            display: none;
+            background-color: rgb(192, 255, 209);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+
+<body>
+    <button>Click The Button to Start the process</button>
+    <p> Task is progress</p>
+    <div> Welcome User</div>
+    <div> Have a Nice day</div>
+    <div> Thanks user click and start your task</div>
+    <div> Your task is in progress its soon to be completed</div>
+    <script>
+        $("button").on("click", function () {
+            $("p").append("The task is started its running");
+            $("div").each(function (j) {
+                $(this).fadeIn().fadeOut(1900 * (j + 3));
+            });
+
+            $("button").promise().done(function () {
+                $("p").append(" The task is completed ");
+            });
+        });
+           
+    </script>
+</body>
+
+</html>
