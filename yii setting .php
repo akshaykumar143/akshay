@@ -27,10 +27,10 @@ common -> main-local.php
 create assests folder and giv permission 
 
 and   last run
-----------------------------------------------------
+------------------------------------------------ 
        $pathFile = \Yii::getAlias('@webroot');
 
- config/main.php
+ config/main.php --
       'defaultRoute' => 'example', ( = = = setting default route = = = )
 ----------------------------------------------------
 get rows
