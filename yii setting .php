@@ -35,7 +35,7 @@ and   last run
 ----------------------------------------------------
 get rows
 $enroll = Enrollment::find()
-->where(['student_id' => $model->id])
+->where(['student_id' => $model->id]) 
 ->all();
 $query->andWhere('end_date <= NOW()');
  $model=AssignmentSubmitedData::findOne(["assignment_id"=> $assignment_id,
