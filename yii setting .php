@@ -29,6 +29,9 @@ create assests folder and giv permission
 and   last run
 ----------------------------------------------------
        $pathFile = \Yii::getAlias('@webroot');
+
+ config/main.php
+      'defaultRoute' => 'example', ( = = = setting default route = = = )
 ----------------------------------------------------
 get rows
 $enroll = Enrollment::find()
